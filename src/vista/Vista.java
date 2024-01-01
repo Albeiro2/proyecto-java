@@ -27,37 +27,33 @@ public class Vista extends javax.swing.JFrame {
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        botonBuscar = new javax.swing.JButton();
+        cajaBuscar = new javax.swing.JTextField();
+        cajaId = new javax.swing.JTextField();
+        cajaCorreo = new javax.swing.JTextField();
+        botonInsertar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        cajaEdad = new javax.swing.JTextField();
+        cajaNombre = new javax.swing.JTextField();
+        botonLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panel.setPreferredSize(new java.awt.Dimension(340, 425));
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setText("Buscar");
-        panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 40, -1, -1));
-        panel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 40, 167, -1));
-        panel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 82, 71, -1));
-        panel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 203, -1));
-        panel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 315, 211, -1));
+        botonBuscar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botonBuscar.setText("Buscar");
+        panel.add(botonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
+        panel.add(cajaBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 167, -1));
+        panel.add(cajaId, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 71, -1));
+        panel.add(cajaCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 315, 211, -1));
 
-        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton2.setText("Insertar");
-        panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 422, -1, -1));
-
-        jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton3.setText("Limpiar");
-        panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 422, -1, -1));
+        botonInsertar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botonInsertar.setText("Insertar");
+        panel.add(botonInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Nombre:");
@@ -70,7 +66,12 @@ public class Vista extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Correo:");
         panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 314, 100, -1));
-        panel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 71, -1));
+        panel.add(cajaEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 71, -1));
+        panel.add(cajaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 210, -1));
+
+        botonLimpiar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botonLimpiar.setText("Limpiar");
+        panel.add(botonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,17 +123,17 @@ public class Vista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton botonBuscar;
+    public javax.swing.JButton botonInsertar;
+    public javax.swing.JButton botonLimpiar;
+    public javax.swing.JTextField cajaBuscar;
+    public javax.swing.JTextField cajaCorreo;
+    public javax.swing.JTextField cajaEdad;
+    public javax.swing.JTextField cajaId;
+    public javax.swing.JTextField cajaNombre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
