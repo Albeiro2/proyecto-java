@@ -43,7 +43,6 @@ public class Controlador implements ActionListener {
     
     private void llenarPersona(){
         persona.setCorreo(vista.cajaCorreo.getText());
-        persona.setId(Integer.parseInt(vista.cajaId.getText()));
         persona.setEdad(Integer.parseInt(vista.cajaEdad.getText()));
         persona.setNombre(vista.cajaNombre.getText());
     }
