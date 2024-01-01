@@ -14,9 +14,9 @@ public class Database extends Conexion {
     
     //Este metodo es para buscar a la persona en la base datos
     public boolean buscar(Persona persona,String buscar){
-        
+        Connection conexion;
         try {
-            Connection conexion = getConnection();
+            conexion = getConnection();
             ps = conexion.prepareStatement("select * from persona where nombre = ? or correo = ?");
             ps.setString(1, buscar);
             ps.setString(2, buscar);
@@ -32,7 +32,7 @@ public class Database extends Conexion {
                return true;
                 
             }else{
-                JOptionPane.showMessageDialog(null, "No existe esta persona");
+               
                 return false;
             }
             
@@ -47,5 +47,31 @@ public class Database extends Conexion {
             }
         }
         
+    }
+    
+    public boolean insertar(Persona persona){
+        Connection conexion;
+        try {
+            
+            conexion = getConnection();
+            ps = conexion.prepareStatement("insert into persona(nombre,correo,edad)values(?,?,?)");
+            ps.setString(1, persona.getNombre());
+            ps.setString(2, persona.getCorreo());
+            ps.setInt(3, persona.getEdad());
+            
+            int resultado = ps.executeUpdate();
+            
+            if(resultado > 0){
+                return true;
+                
+            }else{
+                return false;    
+            }
+            
+            
+        } catch (SQLException e) {  
+            System.err.println("Error, "+e);
+            return false;
+        }
     }
 }
