@@ -38,6 +38,8 @@ public class Vista extends javax.swing.JFrame {
         cajaEdad = new javax.swing.JTextField();
         cajaNombre = new javax.swing.JTextField();
         botonLimpiar = new javax.swing.JButton();
+        botonModificar = new javax.swing.JButton();
+        botonEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,7 +55,7 @@ public class Vista extends javax.swing.JFrame {
 
         botonInsertar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botonInsertar.setText("Insertar");
-        panel.add(botonInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, -1, -1));
+        panel.add(botonInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Nombre:");
@@ -71,17 +73,25 @@ public class Vista extends javax.swing.JFrame {
 
         botonLimpiar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botonLimpiar.setText("Limpiar");
-        panel.add(botonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
+        panel.add(botonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
+
+        botonModificar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botonModificar.setText("Modificar");
+        panel.add(botonModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
+
+        botonEliminar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botonEliminar.setText("Eliminar");
+        panel.add(botonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
         );
 
         pack();
@@ -124,8 +134,10 @@ public class Vista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton botonBuscar;
+    public javax.swing.JButton botonEliminar;
     public javax.swing.JButton botonInsertar;
     public javax.swing.JButton botonLimpiar;
+    public javax.swing.JButton botonModificar;
     public javax.swing.JTextField cajaBuscar;
     public javax.swing.JTextField cajaCorreo;
     public javax.swing.JTextField cajaEdad;

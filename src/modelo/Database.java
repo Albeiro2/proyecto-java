@@ -49,6 +49,7 @@ public class Database extends Conexion {
         
     }
     
+    //Aqui insertamos personas en la base de datos
     public boolean insertar(Persona persona){
         Connection conexion;
         try {
@@ -70,6 +71,32 @@ public class Database extends Conexion {
             
             
         } catch (SQLException e) {  
+            System.err.println("Error, "+e);
+            return false;
+        }
+    }
+    
+    //Aqui modificamos en la base de datos
+    public boolean modificar(Persona persona,String buscar){
+        Connection conexion;
+        
+        try {
+            conexion = getConnection();
+            ps = conexion.prepareStatement("update persona set nombre =?, correo =?,edad =? where id = ?");
+            ps.setString(1, persona.getNombre());
+            ps.setString(2, persona.getCorreo());
+            ps.setInt(3, persona.getEdad());
+            ps.setInt(4, Integer.parseInt(buscar));
+            
+            int resultado = ps.executeUpdate();
+            
+            if(resultado > 0){
+                return true;
+            }else{
+                return false;
+            }
+            
+        } catch (Exception e) {
             System.err.println("Error, "+e);
             return false;
         }

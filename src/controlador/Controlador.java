@@ -23,6 +23,8 @@ public class Controlador implements ActionListener {
         this.vista.botonBuscar.addActionListener(this);
         this.vista.botonInsertar.addActionListener(this);
         this.vista.botonLimpiar.addActionListener(this);
+        this.vista.botonModificar.addActionListener(this);
+        this.vista.botonEliminar.addActionListener(this);
         
     }
     
@@ -68,8 +70,20 @@ public class Controlador implements ActionListener {
             llenarPersona();
             if(operar.insertar(persona)){
                 JOptionPane.showMessageDialog(null, "registro exitoso");
+                limpiar();
             }else{
                 JOptionPane.showMessageDialog(null, "registro fallidos");
+            }
+        }
+        
+        if(e.getSource() == vista.botonModificar){
+            llenarPersona();
+            if(operar.modificar(persona, vista.cajaId.getText())){
+                JOptionPane.showMessageDialog(null, "Modificacion exitosa");
+                limpiar();
+            }else{
+                 JOptionPane.showMessageDialog(null, "Eror en la modificacion");
+                
             }
         }
     }
