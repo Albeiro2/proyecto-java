@@ -61,7 +61,7 @@ public class Database extends Conexion {
             ps.setInt(3, persona.getEdad());
             
             int resultado = ps.executeUpdate();
-            
+            conexion.close();
             if(resultado > 0){
                 return true;
                 
@@ -89,7 +89,31 @@ public class Database extends Conexion {
             ps.setInt(4, Integer.parseInt(buscar));
             
             int resultado = ps.executeUpdate();
+            conexion.close();
             
+            if(resultado > 0){
+                return true;
+            }else{
+                return false;
+            }
+            
+        } catch (Exception e) {
+            System.err.println("Error, "+e);
+            return false;
+        }
+    }
+    
+    //Aqui eliminamos en la base de datos
+    public boolean eliminar(int id){
+        Connection conexion;
+        
+        try {
+            conexion = getConnection();
+            ps = conexion.prepareStatement("delete from persona where id = ?");
+            ps.setInt(1, id);
+            
+            int resultado = ps.executeUpdate();
+            conexion.close();
             if(resultado > 0){
                 return true;
             }else{

@@ -86,5 +86,15 @@ public class Controlador implements ActionListener {
                 
             }
         }
+        
+        if(e.getSource() == vista.botonEliminar){
+            if(operar.eliminar(Integer.parseInt(vista.cajaId.getText()))){
+                JOptionPane.showMessageDialog(null, "Registro eliminado");
+                limpiar();
+            }else{
+                JOptionPane.showMessageDialog(null, "Error al eliminar registro");
+                
+            }
+        }
     }
 }
